@@ -5,13 +5,13 @@ cryptography==44.0.0
 Django==5.1.4
 gunicorn==23.0.0
 joblib==1.4.2
-numpy==1.23.0  
+numpy==1.21.4  # Specific stable version
 packaging==24.2
 pandas==2.2.3
 pdfminer.six==20231228
 pdfplumber==0.11.5
 pillow==11.1.0
-psycopg2-binary==2.9.3
+psycopg2-binary==2.9.1  # Stable version
 pycparser==2.22
 pypdfium2==4.30.1
 pyspellchecker==0.8.2
