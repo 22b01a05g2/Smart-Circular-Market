@@ -1,0 +1,10 @@
+Django>=3.2,<4.0
+gunicorn
+whitenoise
+psycopg2
+pillow
+pytesseract
+pandas
+scikit-learn
+numpy
+python-dateutil
