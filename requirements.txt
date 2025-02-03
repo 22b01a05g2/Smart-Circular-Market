@@ -5,7 +5,7 @@ cryptography==44.0.0
 Django==5.1.4
 gunicorn==23.0.0
 joblib==1.4.2
-numpy==1.21.4  # Specific stable version
+numpy==1.23.0 
 packaging==24.2
 pandas==2.2.3
 pdfminer.six==20231228
