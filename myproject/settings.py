@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY, DEBUG, ALLOWED_HOSTS, INSTALLED_APPS, MIDDLEWARE, etc.
 SECRET_KEY = 'django-insecure-53k7jf$u3+-@t_ymdmboqav!j#k17j-6(g@$%6(v(=u685n79z'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,6 +21,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -75,6 +76,7 @@ USE_TZ = True
 # Static files settings
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "appname/static"]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
