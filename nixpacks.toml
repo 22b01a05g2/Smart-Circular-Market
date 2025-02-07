@@ -1,2 +1,12 @@
 [phases.setup]
-nixPkgs = ["tesseract"]
+nixPkgs = ["python311", "tesseract"]
+
+[phases.build]
+cmds = [
+  "python -m venv /opt/venv",  
+  "source /opt/venv/bin/activate",  
+  "pip install -r requirements.txt"
+]
+
+[start]
+cmd = "gunicorn myproject.wsgi:application --bind 0.0.0.0:$PORT"
