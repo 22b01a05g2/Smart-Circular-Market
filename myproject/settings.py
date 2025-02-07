@@ -107,10 +107,18 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 7  # Session expiry in seconds (1 week)
 
 # Default URL for password reset
 PASSWORD_RESET_TIMEOUT_DAYS = 1  # OTP validity in days
+<<<<<<< HEAD
 CSRF_COOKIE_SECURE = True
+=======
+CSRF_COOKIE_SECURE = False
+>>>>>>> fae6cbb (Deleted all files inside media directory)
 CSRF_TRUSTED_ORIGINS = [
     'https://smart-circular-market-production.up.railway.app',
     'https://smart-circular-market.com',
 ]
+<<<<<<< HEAD
 CSRF_COOKIE_DOMAIN = 'smart-circular-market-production.up.railway.app'
 
+=======
+CSRF_COOKIE_DOMAIN = '.smart-circular-market.com' 
+>>>>>>> fae6cbb (Deleted all files inside media directory)
