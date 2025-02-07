@@ -10,8 +10,13 @@ from datetime import datetime
 from dateutil import parser
 import re
 from PIL import Image
+import shutil
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = "/nix/store/*-tesseract-*/bin/tesseract"
+tesseract_path = shutil.which("tesseract")
+if tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
+else:
+    pytesseract.pytesseract.tesseract_cmd = "/nix/store/*-tesseract-*/bin/tesseract"
 import io
 import pandas as pd
 from django.contrib.auth.models import User
