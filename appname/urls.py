@@ -2,7 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.login_view, name='login'),
+    path('home/', views.home, name='home'),
     path('register/', views.register_view, name='register'),
     path('login/', views.login_view, name='login'),
     path('forgot-password/', views.forgot_password_view, name='forgot_password'),
@@ -28,3 +29,4 @@ urlpatterns = [
     path('update-price/<int:product_id>/', views.update_price, name='update_price'),
     path('logout/', views.logout_view, name='logout'),
 ]
+
