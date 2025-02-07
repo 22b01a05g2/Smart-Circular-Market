@@ -11,7 +11,6 @@ from dateutil import parser
 import re
 from PIL import Image
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 import io
 import pandas as pd
 from django.contrib.auth.models import User
